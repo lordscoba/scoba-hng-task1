@@ -38,6 +38,8 @@ func CallScoba(w http.ResponseWriter, r *http.Request) {
 	//
 	//   fmt.Println(string(out))
 
+	// set headers content type
+	w.Header().Add("Content-Type", "application/json")
 	//Allow CORS here By * or specific origin
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
